@@ -19,37 +19,43 @@
 <body>
 
     <!-- navbar -->
-    <div class="navbar-fixed">
-        <nav class="brown lighten-1">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="index.html" class="brand-logo logo-c">
-                        Dapur Tina
-                    </a>
-                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-                        <i class="material-icons">menu</i>
-                    </a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li>
-                            <a href="#about">About Us</a>
-                        </li>
-                        <li>
-                            <a href="#products">Products</a>
-                        </li>
-                        <li>
-                            <a href="#why">Why Us</a>
-                        </li>
-                        <li>
-                            <a href="#location">Location</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
+    <header>
+        <div class="navbar-fixed">
+            <nav class="brown lighten-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="nav-wrapper">
+                                <a href="index.html" class="brand-logo logo-c">
+                                    Dapur Tina
+                                </a>
+                                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                                    <i class="material-icons">menu</i>
+                                </a>
+                                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                    <li>
+                                        <a href="#about">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#products">Products</a>
+                                    </li>
+                                    <li>
+                                        <a href="#why">Why Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#location">Location</a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
+            </nav>
+        </div>
+    </header>
 
     <!-- sidenav -->
     <ul class="sidenav" id="mobile-nav">
@@ -103,8 +109,8 @@
     </section>
 
     <!-- about us -->
-    <section>
-        <div class="container about" id="about">
+    <section class="scrollspy tes" id="about">
+        <div class="container about" >
             <h3 class="center light">About Us</h3>
             <div class="row">
                 <div class="col s12 m6 justify">
@@ -126,7 +132,7 @@
     </section>
 
     <!-- product card -->
-    <section class="grey lighten-3 tes">
+    <section class="grey lighten-3 tes scrollspy" id="products">
         <div class="container">
             <div class="row">
                 <h3 class="product center white-text" id="product">Products</h3>
@@ -178,7 +184,7 @@
 
     <!-- parallax why us -->
 
-    <div class="parallax-container ">
+    <div class="parallax-container scrollspy" id="why">
         <div class="parallax ">
             <img src="img/slider/4.jpg ">
         </div>
@@ -210,13 +216,13 @@
 
     <!-- location -->
 
-    <div class="container map" id="map">
+    <div class="container map scrollspy" id="location">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126891.34316871063!2d106.75022683278382!3d-6.348126886421284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed7de74b6f3b%3A0xbefede57fe551dfe!2sDapur+Tina!5e0!3m2!1sid!2sid!4v1527913588693"
             width="1284" height="456" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
     <!-- contact -->
-    <div class="container">
+    <div class="container scrollspy" id="contact">
         <h3 class="center contact">Contact</h3>
         <div class="row">
             <div class="col s12 m12 center">
@@ -265,6 +271,11 @@
 
         const parallax = document.querySelectorAll('.parallax');
         M.Parallax.init(parallax);
+
+        const scrollspy = document.querySelectorAll('.scrollspy');
+        M.ScrollSpy.init(scrollspy, {
+            scrollOffset: 50
+        });
     </script>
 </body>
 
